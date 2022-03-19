@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.container {
+    display: flex;
+    border-color: green;
+    max-width: 780px;
+    height: auto;
+    flex-wrap: wrap;
+    border: 2px solid black
+    
+}
+
+.cells {
+
+background-color: white; 
+border: 1px dotted rgb(226, 216, 216);  
+
+width: 50px;
+height: 50px;
+
+}
+
+.hover {
+    background-color: black;
+}
