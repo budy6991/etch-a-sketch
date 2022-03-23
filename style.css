@@ -1,29 +1,30 @@
+
 body {
     display: flex;
     justify-content: center;
     align-content: center;
 }
 
+
 .container {
-    display: flex;
-    border-color: green;
-    max-width: 780px;
-    height: auto;
-    flex-wrap: wrap;
-    border: 2px solid black
+    display: grid;
     
+    width: 960px;
+    height: 960px;
+    background-color: rgb(212, 192, 192);
 }
 
-.cells {
 
-background-color: white; 
-border: 1px dotted rgb(226, 216, 216);  
-width: 50px;
-height: 50px;
+.colRow{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    border-style: dotted, black;
+
 
 }
 
-.hover {
+/* .hover {
     background-color: black;
-}
+} */
 
