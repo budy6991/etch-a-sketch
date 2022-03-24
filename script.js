@@ -1,27 +1,17 @@
-// Generating the grid
+// Targets the container
 
 const container = document.querySelector(".container");
 
-const cell = document.createElement('div')
+const cell = document.createElement('div');
+
+// Targets the clear button 
+
+const btn = document.querySelector('button');
+btn.classList.add('btn')
+btn.textContent = 'Clear';
 
 
-
-
-// function grid (cell)  {
-    
-//     for (i= 0 ; i<255; i++){
-//         cell = document.createElement('div')
-//         cell.classList.add('cells')
-//         container.appendChild(cell)
-//         cell.addEventListener('mouseover', (e) => {
-//             e.target.classList.add('hover')
-//         })
-//     }
-    
-// }
-
-// grid (cell)
-
+// Creates the 16x16 grid
 
 function createGrid (columns, rows){
 
@@ -29,11 +19,20 @@ function createGrid (columns, rows){
 
     for (let i = 0; i< grid; i++) {
         let colRow = document.createElement ('div')
-        colRow.classList.add('colRow')
-        container.appendChild(colRow)
+        colRow.classList.add('colRow');
+        container.appendChild(colRow);
+        colRow.addEventListener('mouseover', function (e) {
+            e.target.classList.add ('hover')
+        });
         
     }
 
+    
+
 }
 
-createGrid(16,16);
+createGrid(16,16)
+
+// Resets the grid to blank
+
+
