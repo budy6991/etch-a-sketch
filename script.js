@@ -33,6 +33,8 @@ function createGrid (columns, rows){
 
 createGrid(16,16)
 
+
+
 // Resets the grid to blank
 
 
