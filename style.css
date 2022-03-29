@@ -31,10 +31,12 @@ body {
     margin-bottom: 25px;
 }
 
-.container {
-    display:grid ;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+
+
+#container {
+
+    display: grid;
+    
     width: 960px;
     height: 960px;
     background-color: rgb(233, 223, 223);
@@ -42,14 +44,14 @@ body {
     box-shadow: 1px 10px 15px black;
 }
 
-
 .colRow {
-
-    width: 100%;
-    height: auto;
-    border: 1px dotted rgb(206, 195, 195);
+    
+    max-width: 60px;
+    max-height: 60px;
+    border: dotted black 1px;
 
 }
+
 
 .hover {
     background-color: black;

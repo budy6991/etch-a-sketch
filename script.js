@@ -1,6 +1,6 @@
 // Targets the container
 
-const container = document.querySelector(".container");
+const container = document.querySelector("#container");
 
 const cell = document.createElement('div');
 
@@ -13,25 +13,25 @@ btn.textContent = 'Clear';
 
 // Creates the 16x16 grid
 
-function createGrid (columns, rows){
+function createGrid (square){
 
-    let grid = columns * rows;
+    let grid = square * square
 
     for (let i = 0; i< grid; i++) {
         let colRow = document.createElement ('div')
-        colRow.classList.add('colRow');
-        container.appendChild(colRow);
+        colRow.classList.add('colRow')
+        container.appendChild(colRow)
+        container.style.setProperty('grid-template-columns', 'repeat(' + square + ', 1fr)');  
+        container.style.setProperty('grid-template-rows', 'repeat(' + square + ', 1fr)');
         colRow.addEventListener('mouseover', function (e) {
             e.target.classList.add ('hover')
         });
-        
-    }
 
-    
+    }
 
 }
 
-createGrid(16,16)
+createGrid(64)
 
 
 
