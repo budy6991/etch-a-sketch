@@ -1,15 +1,9 @@
+
 // Targets the container
 
 const container = document.querySelector("#container");
 
 const cell = document.createElement('div');
-
-// Targets the clear button 
-
-const btn = document.querySelector('button');
-btn.classList.add('btn')
-btn.textContent = 'Clear';
-
 
 // Creates the 16x16 grid
 
@@ -27,14 +21,41 @@ function createGrid (square){
             e.target.classList.add ('hover')
         });
 
+    
     }
 
+    
 }
 
-createGrid(64)
+createGrid (16)
+
+// Clear button
+
+const btn = document.querySelector('button');
+btn.classList.add('btn')
+btn.textContent = 'Clear';
+
+btn.addEventListener('click', function () {
+    
+    while(container.lastElementChild){
+        container.removeChild(container.lastElementChild)
+    }
+
+    let userInput = window.prompt('insert a value')
+
+    if (userInput <= 16){
+        createGrid(16)
+    }
+
+    else if (userInput >= 100) {
+        createGrid(100)
+    }
+
+    else createGrid(userInput)
+
+})
 
 
 
-// Resets the grid to blank
 
 
